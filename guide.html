@@ -1,0 +1,120 @@
+<style>
+.storm-guide { --ink:#192e31; --quiet:#455b5e; --paper:#f8faf8; --accent:#2f655d; --rule:#d8e5df; background:var(--paper); color:var(--ink); border:1px solid var(--rule); border-radius:1rem; overflow:hidden; }
+.storm-guide *, .storm-guide *::before, .storm-guide *::after { box-sizing:border-box; }
+.storm-guide a { color:#1b5d52; text-underline-offset:.18em; }
+.storm-guide a:focus-visible { outline:3px solid #bb6b33; outline-offset:3px; }
+.storm-guide .width { width:min(100% - 3rem, 68rem); margin-inline:auto; }
+.storm-guide .hero { background:#153b3a; color:#f8fffc; }
+.storm-guide .hero-layout { display:grid; grid-template-columns:.92fr 1.08fr; gap:clamp(1.5rem,5vw,4rem); align-items:center; padding-block:clamp(2rem,6vw,4.5rem); }
+.storm-guide h1 { color:#fff; font-size:clamp(2.3rem,5.6vw,4.7rem); line-height:1.04; letter-spacing:-.045em; margin:.5rem 0 .85rem; padding:0; }
+.storm-guide .location { color:#b3e6d5; font-size:.92rem; font-weight:700; margin:0; }
+.storm-guide .deck { color:#e1ede8; font-size:clamp(1.03rem,2vw,1.18rem); margin:0; max-width:39ch; }
+.storm-guide .hero img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:.6rem; }
+.storm-guide .nav { display:flex; flex-wrap:wrap; border-bottom:1px solid var(--rule); gap:.35rem 1.55rem; padding-block:1rem; }
+.storm-guide .nav a { font-size:.95rem; font-weight:700; }
+.storm-guide article { width:min(100% - 3rem, 48rem); margin-inline:auto; padding-block:2.3rem 3.5rem; }
+.storm-guide article p, .storm-guide article li { font-size:1.04rem; line-height:1.64; }
+.storm-guide .intro { color:var(--quiet); font-size:1.2rem; }
+.storm-guide section { margin-top:2.15rem; }
+.storm-guide h2 { color:var(--ink); font-size:clamp(1.6rem,4vw,2.3rem); line-height:1.13; letter-spacing:-.025em; margin:0 0 .75rem; padding:0; scroll-margin-top:1rem; }
+.storm-guide .urgent { border-left:4px solid #b96b34; background:#fff0df; padding:1rem 1.2rem; margin:1.3rem 0 2rem; }
+.storm-guide .urgent p { margin:0; }
+.storm-guide .checklist { border:1px solid #c8ded2; background:#e7f2eb; border-radius:.55rem; padding:1.25rem 1.5rem; }
+.storm-guide .checklist ul { margin:0; padding-left:1.2rem; }
+.storm-guide .checklist li + li { margin-top:.3rem; }
+.storm-guide .references { border-top:1px solid var(--rule); margin-top:1.75rem; padding-top:1rem; }
+.storm-guide .references p, .storm-guide .references li { font-size:.92rem; }
+.storm-guide footer { background:#153b3a; color:#fafefa; }
+.storm-guide .footer-inner { width:min(100% - 3rem, 68rem); margin-inline:auto; padding-block:1.7rem 2.15rem; }
+.storm-guide .footer-inner h2 { color:#fafefa; font-size:1.55rem; }
+.storm-guide .profiles { display:flex; flex-wrap:wrap; gap:.55rem; list-style:none; padding:0; margin:0; }
+.storm-guide .profiles a { display:flex; align-items:center; gap:.45rem; color:#fcfff9; padding:.42rem .65rem .42rem .45rem; border:1px solid #77948c; border-radius:.4rem; text-decoration:none; }
+.storm-guide .profiles a:hover { background:#28534d; text-decoration:underline; }
+.storm-guide .icon { display:inline-grid; place-items:center; width:1.6rem; height:1.6rem; border-radius:.3rem; color:white; background:#13191f; font-weight:800; line-height:1; }
+.storm-guide .ez { background:#2c4c8a; font-size:.68rem; }
+.storm-guide .pin { background:#b00026; font-family:Georgia,serif; font-style:italic; }
+.storm-guide .mc { background:#523580; font-size:.62rem; }
+.storm-guide .manta { background:#176458; }
+.storm-guide .houzz { background:#90ce60; color:#1c3216; }
+.storm-guide .tok { text-shadow:-1px 0 #54e5e0,1px 0 #ff6387; font-size:1.25rem; }
+@media (max-width:48rem) { .storm-guide .hero-layout { grid-template-columns:1fr; } }
+@media (max-width:33rem) { .storm-guide .width, .storm-guide article, .storm-guide .footer-inner { width:calc(100% - 2rem); } }
+</style>
+<div class="storm-guide">
+  <header class="hero">
+    <div class="width hero-layout">
+      <div>
+        <p class="location">Durham, North Carolina</p>
+        <h1>When only part of your home has power after a storm</h1>
+        <p class="deck">What to notice from a safe location, when to contact the utility, and what to have ready when you call an electrician.</p>
+      </div>
+      <img src="{{ HERO_IMAGE }}" alt="Tree-lined residential street in Durham after rainfall" width="1200" height="800">
+    </div>
+  </header>
+  <nav class="width nav" aria-label="Guide sections">
+    <a href="#storm-pattern">What you noticed</a>
+    <a href="#storm-utility">Call the utility</a>
+    <a href="#storm-call">Call an electrician</a>
+    <a href="#storm-restoration">After restoration</a>
+    <a href="#storm-checklist">Call checklist</a>
+  </nav>
+  <article>
+    <p class="intro">The storm has passed, and the lamps in one room are working while another part of the house is dark. You can give the utility or an electrician a clear account from where you are. Note what changed and when it happened, then let the people handling the call decide what needs to be inspected.</p>
+    <aside class="urgent" aria-label="Immediate danger">
+      <p><strong>Fire or smoke:</strong> Get everyone out, stay outside, and call 911 from a safe place. If you see a downed line, stay away from the line and anything it touches. Call 911 if there is immediate danger, and notify the utility from a safe location.</p>
+    </aside>
+    <section aria-labelledby="storm-pattern">
+      <h2 id="storm-pattern">Describe the pattern you’ve already noticed</h2>
+      <p>Start with the time you first saw the change. If you were home when the storm passed, note whether the lights went out during the storm or after power came back. If you were away, say when you got home and what you found. In a call, “the dining room lights came back but the upstairs lights stayed off” is more useful than “the power is acting strange.”</p>
+      <p>Write down what still works and which rooms appear affected based on what you already observed. Mention if the lights flickered or changed brightness before the outage. Give the utility or electrician any unusual sounds or smells you noticed without going closer to investigate. Leave the panel and suspect equipment alone.</p>
+    </section>
+    <section aria-labelledby="storm-utility">
+      <h2 id="storm-utility">Use the utility’s outage report to add context</h2>
+      <p>Check your utility’s outage map from your phone if you can do so from a safe location. If your neighborhood shows an outage, note the time you checked and share that with anyone you call. If the map shows restoration but your home still has partial power, report what you’re seeing to the utility and ask what it wants you to do next.</p>
+      <p>When you report the problem, give the service address and a callback number. Mention that some parts of the home still have power so the person taking the report can record the difference. Keep the report number or any message about the next update. You can pass it to an electrician if the utility asks you to arrange an inspection.</p>
+    </section>
+    <section aria-labelledby="storm-call">
+      <h2 id="storm-call">Share the utility’s update when you call an electrician</h2>
+      <p>If you’re arranging an inspection, start with what the utility said and what is still happening at the property. Ask how soon the company can advise on the situation, how the visit is billed, and what it needs to know before sending someone. If you’re calling after hours, ask for the expected callback and any instructions to follow from a safe place while you wait.</p>
+      <p>If you searched for “<a class="service" href="https://brianelectricllc.com/services/emergency-electrician">24 hour electrician Durham, NC</a>,” Brian Electric LLC’s emergency service page has service information. Confirm current availability when you call. If there is immediate danger, call emergency services first.</p>
+      <p>If the home is a rental or part of a shared building, give the unit number, tell the property manager what you already reported, and identify who can provide access. If someone else is at the property, give them the expected callback time and agree on who will speak with the utility or electrician if there is an update.</p>
+    </section>
+    <section aria-labelledby="storm-restoration">
+      <h2 id="storm-restoration">Keep track of what changed after restoration</h2>
+      <p>If the utility closes an outage report and a problem remains inside the home, keep both times in your notes. For example, you might tell the electrician that the utility marked service restored at 7 p.m. and that the hallway was still dark an hour later. A brief timeline helps distinguish the area outage from the symptoms you want the electrician to review.</p>
+      <p>If you need to describe the visit to a landlord or another household member, ask the technician for a written summary of what they inspected and any follow-up they recommend. Save that summary alongside the utility report number. If the issue returns after another storm, you can describe the new symptoms and share the earlier report without having to reconstruct the first incident.</p>
+    </section>
+    <section class="checklist" aria-labelledby="storm-checklist">
+      <h2 id="storm-checklist">Keep these details handy for the call</h2>
+      <ul>
+        <li>Your service address, unit number if applicable, and callback number</li>
+        <li>When the storm passed and when you first noticed the change</li>
+        <li>Which lights or rooms appeared affected based on what you already observed</li>
+        <li>The utility outage or restoration message and any report number</li>
+        <li>Who can meet the technician and where they can enter the property</li>
+      </ul>
+    </section>
+    <aside class="references" aria-label="Electrical safety sources">
+      <p><strong>Safety references</strong></p>
+      <ul>
+        <li><a href="https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/home-fire-escape-plans/">U.S. Fire Administration home fire escape guidance</a></li>
+        <li><a href="https://www.esfi.org/downed-power-lines/">Electrical Safety Foundation International guidance on downed lines</a></li>
+        <li><a href="https://www.esfi.org/home-wiring-safety-tips/">Electrical Safety Foundation International home wiring safety tips</a></li>
+      </ul>
+    </aside>
+  </article>
+  <footer>
+    <div class="footer-inner">
+      <h2>Brian Electric LLC profiles</h2>
+      <ul class="profiles">
+        <li><a href="https://ezlocal.com/nc/hillsborough/commercial-electricians/0919912853"><span class="icon ez" aria-hidden="true">EZ</span>EZlocal</a></li>
+        <li><a href="https://x.com/brianelectriclc"><span class="icon x" aria-hidden="true">𝕏</span>X</a></li>
+        <li><a href="https://www.pinterest.com/brianelectricllc/"><span class="icon pin" aria-hidden="true">P</span>Pinterest</a></li>
+        <li><a href="https://www.merchantcircle.com/brian-electric-llc"><span class="icon mc" aria-hidden="true">MC</span>MerchantCircle</a></li>
+        <li><a href="https://www.manta.com/c/m1hgrrs/brian-electric-llc"><span class="icon manta" aria-hidden="true">M</span>Manta</a></li>
+        <li><a href="https://www.houzz.com/pro/brianelectriclc"><span class="icon houzz" aria-hidden="true">h</span>Houzz</a></li>
+        <li><a href="https://www.tiktok.com/@brianelectricllcc"><span class="icon tok" aria-hidden="true">♪</span>TikTok</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
